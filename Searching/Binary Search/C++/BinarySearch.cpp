@@ -17,9 +17,9 @@
 int binarySearch(int itemList[],int itemListSize,int item)
 {
     int leftIndex = 0;
-    int rightIndex = itemListSize;
+    int rightIndex = itemListSize-1;
     int middleIndex;
-    while (leftIndex < rightIndex)
+    while (leftIndex <= rightIndex)
     {
         middleIndex = (leftIndex+rightIndex)/2;
         if (itemList[middleIndex] < item)
@@ -39,6 +39,7 @@ int binarySearch(int itemList[],int itemListSize,int item)
 }
 
 //Simple demonstration for the algorithm
+//Given array must be sorted (Ascendingly)
 int main(int argc,char* argv[])
 {   
     int arr[] = {1,2,3,4,5};
